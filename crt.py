@@ -41,7 +41,6 @@ def crt_rsa(c, d, prime1, prime2):  # m = c^d mod (prime1 * prime2)
 def find_inverse(a, m):
     for x in range(1, m):
         if (a * x) % m == 1:
-            print(f'inverse: {x}')
             return x
     return None
 

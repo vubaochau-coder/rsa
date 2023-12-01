@@ -58,6 +58,13 @@ def isMillerRabinPassed(mrc):
 			return False
 	return True
 
+def initPrime(a):
+    while True:
+        prime_candidate = getLowLevelPrime(a)
+        if not isMillerRabinPassed(prime_candidate):
+            continue
+        else:
+            return prime_candidate
 
 if __name__ == '__main__':
     a = int(input())
