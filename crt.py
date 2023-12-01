@@ -54,6 +54,7 @@ def solve_equation(a, b, m):
 
 if __name__ == '__main__':
     t1 = datetime.now()
-    crt_rsa(17639, 3089, 37, 89)
+    crt_rsa(1331, 5283051, 2069, 3833)
+    # crt_rsa(17639, 3089, 37, 89)
     t2 = datetime.now()
     print(t2 - t1)
