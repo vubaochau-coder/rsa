@@ -14,7 +14,7 @@ first_primes_list = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29,
 
 
 def nBitRandom(n):
-	return random.randrange(2**(n-1)+1, 2**n - 1)
+	return random.randrange(2 ** (n - 1) + 1, 2 ** n - 1)
 
 
 def getLowLevelPrime(n):
@@ -27,9 +27,11 @@ def getLowLevelPrime(n):
 		# Test divisibility by pre-generated
 		# primes
 		for divisor in first_primes_list:
-			if pc % divisor == 0 and divisor**2 <= pc:
-				break
-		else:
-			return pc
+			if pc % divisor == 0 and divisor ** 2 <= pc:
+				return 0
+			else:
+				return pc
 
-
+# if __name__ == '__main__':
+#     # print(353 ** 2)
+#     print(getLowLevelPrime(1))

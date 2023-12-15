@@ -40,7 +40,7 @@ def isMillerRabinPassed(mrc):
 	while ec % 2 == 0:
 		ec >>= 1
 		maxDivisionsByTwo += 1
-	assert(2**maxDivisionsByTwo * ec == mrc-1)
+	assert(2 ** maxDivisionsByTwo * ec == mrc - 1)
 
 	def trialComposite(round_tester):
 		if pow(round_tester, ec, mrc) == 1:
@@ -67,11 +67,15 @@ def initPrime(a):
             return prime_candidate
 
 if __name__ == '__main__':
+    print('imput size:')
     a = int(input())
     while True:
         prime_candidate = getLowLevelPrime(a)
+        # prime_candidate = 124609
         if not isMillerRabinPassed(prime_candidate):
+            # print('not')
             continue
+            # break
         else:
-            print(a, "bit prime is: \n", prime_candidate)
+            print(a, "bit prime is:", prime_candidate)
             break

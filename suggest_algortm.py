@@ -1,5 +1,5 @@
 import init_prime
-import crt
+import Crt
 from math import gcd
 
 def find_e(euler_sum_n, n):
@@ -29,8 +29,8 @@ if __name__ == '__main__':
     
     print(f'e = {e}, g = {g}')
     
-    d = crt.solve_equation(e, 1, euler_sum_n)
-    t = crt.solve_equation(g, 1, euler_sum_z)
+    d = Crt.solve_equation(e, 1, euler_sum_n)
+    t = Crt.solve_equation(g, 1, euler_sum_z)
     
     print(f'd = {d}, t = {t}')
     
@@ -43,14 +43,14 @@ if __name__ == '__main__':
     print(f'public key <(e, n), (g, z)>: <({e}, {n}), ({g}, {z})>')
     print(f'private key <t, z, dp, dq, dr, ds>: <{t}, {z}, {dp}, {dq}, {dr}, {ds}>')
     
-    print('\nExample encrypt message: 123456789:')
-    m = 123456789
+    print('\nExample encrypt message: 123456:')
+    m = 123456
     c1 = m ** e % n
     print(f'c1: {c1}')
     c = c1 ** g % z
     print(f'c: {c}')
     
-    print('\nExample decrypt ciphertext: {c}')
+    print(f'\nExample decrypt ciphertext: {c}')
     c1 = c ** t % z
     print(f'c1: {c1}')
     cp = c1 % p
