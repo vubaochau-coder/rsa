@@ -12,10 +12,8 @@ first_primes_list = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29,
 					263, 269, 271, 277, 281, 283, 293,
 					307, 311, 313, 317, 331, 337, 347, 349]
 
-
 def nBitRandom(n):
 	return random.randrange(2**(n-1)+1, 2**n - 1)
-
 
 def getLowLevelPrime(n):
 	'''Generate a prime candidate divisible 
@@ -33,3 +31,36 @@ def getLowLevelPrime(n):
 			return pc
 
 
+def isMillerRabinPassed(mrc):
+	'''Run 20 iterations of Rabin Miller Primality test'''
+	maxDivisionsByTwo = 0
+	ec = mrc-1
+	while ec % 2 == 0:
+		ec >>= 1
+		maxDivisionsByTwo += 1
+	assert(2**maxDivisionsByTwo * ec == mrc-1)
+
+	def trialComposite(round_tester):
+		if pow(round_tester, ec, mrc) == 1:
+			return False
+		for i in range(maxDivisionsByTwo):
+			if pow(round_tester, 2**i * ec, mrc) == mrc-1:
+				return False
+		return True
+
+	# Set number of trials here
+	numberOfRabinTrials = 20
+	for i in range(numberOfRabinTrials):
+		round_tester = random.randrange(2, mrc)
+		if trialComposite(round_tester):
+			return False
+	return True
+
+
+def prime_generate(n):
+	while True:
+		prime_candidate = getLowLevelPrime(n)
+		if not isMillerRabinPassed(prime_candidate):
+			continue
+		else:
+			return prime_candidate
