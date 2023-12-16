@@ -1,5 +1,4 @@
 from datetime import datetime
-import init_prime
 
 def crt_rsa(c, d, prime1, prime2):  # m = c^d mod (prime1 * prime2)
     print(f'Input: {c}^{d} mod {prime1 * prime2}')
