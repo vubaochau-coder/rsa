@@ -9,58 +9,29 @@ def find_e(euler_sum_n, n):
     return None
 
 if __name__ == '__main__':
-    print('Enter the bit size of the prime number:')
-    a = int(input())
-    p = init_prime.initPrime(a)
-    q = init_prime.initPrime(a)
-    r = init_prime.initPrime(a)
-    s = init_prime.initPrime(a)
-    
-    print(f'Fours prime: p: {p}, q: {q}, r: {r}, s: {s}')
-    
-    n = p * q
-    z = r * s
-    print(f'n = {n}, z = {z}')
-    euler_sum_n = (p - 1) * (q - 1)
-    euler_sum_z = (r -1) * (s - 1)
-    
-    e = find_e(euler_sum_n, n)
-    g = find_e(euler_sum_z, z)
-    
-    print(f'e = {e}, g = {g}')
-    
-    d = crt.solve_equation(e, 1, euler_sum_n)
-    t = crt.solve_equation(g, 1, euler_sum_z)
-    
-    print(f'd = {d}, t = {t}')
-    
-    dp = d % (p - 1)
-    dq = d % (q - 1)
-    dr = d % (r - 1)
-    ds = d % (s - 1)
-    
-    print(f'dp: {dp}, dq: {dq}, dr: {dr}, ds: {ds}')
-    print(f'public key <(e, n), (g, z)>: <({e}, {n}), ({g}, {z})>')
-    print(f'private key <t, z, dp, dq, dr, ds>: <{t}, {z}, {dp}, {dq}, {dr}, {ds}>')
-    
-    print('\nExample encrypt message: 123456789:')
-    m = 123456789
-    c1 = m ** e % n
-    print(f'c1: {c1}')
-    c = c1 ** g % z
-    print(f'c: {c}')
-    
-    print('\nExample decrypt ciphertext: {c}')
-    c1 = c ** t % z
-    print(f'c1: {c1}')
-    cp = c1 % p
-    cq = c1 % q
-    cr = c1 % r
-    cs = c1 % s
-    print(f'cp : {cp}, cq: {cq}, cr: {cr}, cs: {cs}')
-    mp = cp * dp % p
-    mq = cq * dq % q
-    mr = cr * dr % r
-    ms = cs * ds % s
-    print(f'mp : {mp}, mq: {mq}, mr: {mr}, ms: {ms}')
-    
+    print('RSA Process')       
+    #Start the encryption process
+        #Input message => (Text)
+     
+        #Convert message to number (*1)
+        
+        #Generate prime number (4 prime to Multi-key)
+        
+        #Generate public-key, private key
+        
+        #Encrypt message
+        
+        #Show message => (Number)
+        
+    #Start the decryption process
+        #Input message => (Number)
+        
+        #Message pre-processing (optional) (*1)
+        
+        #Decrypt message (using CRT)
+        
+        #Message post-processing (optional) (*1)
+        
+        #Show message => (Text)
+        
+#(*1): Phụ thuộc vào quy cách chuyển đổi message -> number
