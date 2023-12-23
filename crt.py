@@ -1,5 +1,4 @@
 from datetime import datetime
-import init_prime
 from pow_mod import PowMod
 from invert_module import InvertModulo
 
