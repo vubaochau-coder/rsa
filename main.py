@@ -2,6 +2,10 @@ from pow_mod import PowMod
 from prime_generate import prime_generate 
 from get_key import public_key_1, public_key_2, private_key
 from crt import crt_rsa 
+from convert_to_int import ConvertToInt
+from convert_to_string import ConvertToStr
+from encrypt import encrypt
+from decrypt import decrypt
 import time
 
 def main():
@@ -20,16 +24,15 @@ def main():
     print(f'private key:{d}')
 
     # plain text
-    msg = 123456789
-    print(f'Original message:{msg}')
+    msg = input(('Enter message: '))
     
     # encryption
-    C = PowMod(msg,e,n)
+    C = encrypt(msg, e, n)
     print(f'Encrypted message: {C}',)
     
     # decryption with RSA 
     start_time_decrypt_rsa = time.time()
-    M = PowMod(C,d,n)
+    M = decrypt(C,d,n)
     print(f'Decrypted message with rsa: {M}', 'with time ', time.time()-start_time_decrypt_rsa, ' s')  
 
     # decryption with CRT-RSA

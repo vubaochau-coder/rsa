@@ -1,7 +1,7 @@
 from datetime import datetime
 from pow_mod import PowMod
 from invert_module import InvertModulo
-
+from convert_to_string import ConvertToStr
 def crt_rsa(c, d, prime1, prime2):  # m = c^d mod (prime1 * prime2)
     # print(f'Input: {c}^{d} mod {prime1 * prime2}')
     
@@ -45,6 +45,7 @@ def crt_rsa(c, d, prime1, prime2):  # m = c^d mod (prime1 * prime2)
     
     result = prime1 * x + res1
     # print(result)
+    result = ConvertToStr(result)
     return result
 
 # def find_inverse(a, m):

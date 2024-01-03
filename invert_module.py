@@ -15,6 +15,7 @@ def eea(a, b):
         # gcd, s, t = eea(b, a % b)
         s = s - ((a // b) * t)
         # print(f'return ({gcd}, {t}, {s})') #Remove when complete
+        # print(f'return ({gcd}, {t}, {s})') #Remove when complete
         return (gcd, t, s)
 
 #Description: Nghịch đảo Module của e theo phi là một số s, sao cho (e * s) mod phi = 1
