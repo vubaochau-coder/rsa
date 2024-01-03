@@ -3,14 +3,14 @@
 #Trả về gcd là UCLN, s, t
 #Sao cho: gcd = (s * a) + (t * b)
 def eea(a, b):
-    print(f'\nstart eea({a}, {b})') #Remove when complete
+    # print(f'\nstart eea({a}, {b})') #Remove when complete
     if (a % b == 0):
-        print(f'first return ({b}, {0}, {1})') #Remove when complete
+        # print(f'first return ({b}, {0}, {1})') #Remove when complete
         return (b, 0, 1)
     else:
         gcd, s, t = eea(b, a % b)
         s = s - ((a // b) * t)
-        print(f'return ({gcd}, {t}, {s})') #Remove when complete
+        # print(f'return ({gcd}, {t}, {s})') #Remove when complete
         return (gcd, t, s)
 
 #Description: Nghịch đảo Module của e theo phi là một số s, sao cho (e * s) mod phi = 1
