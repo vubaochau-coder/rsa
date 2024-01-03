@@ -20,25 +20,25 @@ def getLowLevelPrime(n):
 	by first primes'''
 	while True:
 		# Obtain a random number
-		pc = nBitRandom(n)
+		pc = nBitRandom(n) 
 
 		# Test divisibility by pre-generated
 		# primes
 		for divisor in first_primes_list:
-			if pc % divisor == 0 and divisor**2 <= pc:
+			if pc % divisor == 0 and divisor ** 2 <= pc:
 				break
-		else:
-			return pc
+			else:
+				return pc
 
 
 def isMillerRabinPassed(mrc):
 	'''Run 20 iterations of Rabin Miller Primality test'''
 	maxDivisionsByTwo = 0
-	ec = mrc-1
+	ec = mrc - 1
 	while ec % 2 == 0:
 		ec >>= 1
 		maxDivisionsByTwo += 1
-	assert(2**maxDivisionsByTwo * ec == mrc-1)
+	assert(2 ** maxDivisionsByTwo * ec == mrc - 1)
 
 	def trialComposite(round_tester):
 		if pow(round_tester, ec, mrc) == 1:
