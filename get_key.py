@@ -1,9 +1,9 @@
 import math
-
+import base64
+from prime_generate import prime_generate 
 
 def public_key_1(p, q):
     return p*q
-
 
 def public_key_2(p,q):
     m= (p-1)*(q-1)
@@ -42,5 +42,18 @@ def private_key(m, e):
         stack1.pop()
         stack2.pop()
         stack3.pop()
-
     return m + d
+def main():
+    bit = input('Enter bit to generate primes: ')
+    p= prime_generate(int(bit))
+    q= prime_generate(int(bit))
+    n= public_key_1(p,q)
+    m= (p-1)* (q-1)
+    e= public_key_2(p,q)
+    d= private_key(m,e)
+    public_key_str = str(e) + "|" +str(n)
+    private_key_str= str(d) + "|" +str(n)+ "|" +str(p)+ "|" +str(q)
+    print(f'private key: {base64.b64encode(private_key_str.encode('utf-8'))}')
+    print(f'public key: {base64.b64encode(public_key_str.encode('utf-8'))}')
+if __name__ == "__main__":
+    main()
