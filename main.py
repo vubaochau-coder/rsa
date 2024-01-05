@@ -9,10 +9,10 @@ from decrypt import decrypt
 import time
 
 def main():
-    p = prime_generate(512)
-    q = prime_generate(512)
-    r = prime_generate(512)
-    s = prime_generate(512)
+    p = prime_generate(1024)
+    q = prime_generate(1024)
+    r = prime_generate(1024)
+    s = prime_generate(1024)
     
     print(f'Prime 1:{p}')
     print(f'Prime 2:{q}')

@@ -44,7 +44,18 @@ if __name__ == '__main__':
     # print('InvertModulo(60, 17)')
     # a = InvertModulo(60, 17)
     # print(a)
-    t1 = datetime.now()
-    crt_rsa(17639, 3089, 37, 89)
-    t2 = datetime.now()
-    print(t2 - t1)
+    # t1 = datetime.now()
+    # crt_rsa(17639, 3089, 37, 89)
+    # t2 = datetime.now()
+    # print(t2 - t1)
+    # m = 37 * 89
+    # m1 = m / 37 #89
+    # m2 = m / 89 #37 476 198
+    x = PowMod(17639, 3089, 3293)
+    
+    # y1 = InvertModulo(m1, 37)
+    # y2 = InvertModulo(m2, 89)
+    # # x = InvertModulo(37, 89)
+    # x = 11 * m1 * y1 + 47    * m2 * y2
+    # 138798 + 0 * (37 * 89)
+    print(x)
