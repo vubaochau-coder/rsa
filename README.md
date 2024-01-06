@@ -1,4 +1,4 @@
-Môn học: SE400.O11.PMCL
+Môn học: SE400.O12.PMCL
 Tên môn học: Seminar các vấn đề hiện đại của Công nghệ phần mềm
 
 Nhóm 15:
