@@ -15,13 +15,13 @@ def decrypt(ciphertext, d, modulo):
 
 def main():
     msg_encrypt= input('Enter encrypt message: ')
-    private_key_base64 = input('Enter private key: ')
+    private_key_base64 = input('\nEnter key to decrypt: \n')
     private_key_str = base64.b64decode( private_key_base64).decode('utf-8')
     parts = private_key_str.split("|")
     private_key_int = int(parts[0])
     public_key_2= int(parts[1])
     start_time_decrypt_rsa = time.time()
-    print(f'\nDecrypt text: \n{decrypt( msg_encrypt, private_key_int, public_key_2)}')
+    print(f'\nDecrypt text: {decrypt( msg_encrypt, private_key_int, public_key_2)}')
     print(f'Time decrypt: {
         time.time()-start_time_decrypt_rsa
     }')

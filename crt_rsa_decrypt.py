@@ -34,14 +34,14 @@ def decrypt_crt(ciphertext, d, prime1, prime2):
 
 def main():
     msg_encrypt= input('Enter encrypt message: ')
-    private_key_base64 = input('Enter private key: ')
+    private_key_base64 = input('\nEnter private key: \n')
     private_key_str = base64.b64decode( private_key_base64).decode('utf-8')
     parts = private_key_str.split("|")
     private_key_int = int(parts[0])
     prime_1=  int(parts[2])
     prime_2=  int(parts[3])
     start_time_decrypt_crt_rsa = time.time()
-    print(f'\nDecrypt text: \n{decrypt_crt(msg_encrypt, private_key_int, prime_1, prime_2)}')
+    print(f'\nDecrypt text: {decrypt_crt(msg_encrypt, private_key_int, prime_1, prime_2)}')
     print(f'Time decrypt: {
         time.time()-start_time_decrypt_crt_rsa
     }')

@@ -16,10 +16,11 @@ def encrypt(message,e,modulo):
 
 def main():
     msg= input('Enter message: ')
-    public_key = input('Enter public key: ')
+    public_key = input('Enter key to encrypt: ')
     public_key_str = base64.b64decode(public_key).decode('utf-8')
-    public_key_1= int(public_key_str.split("|")[0].strip())
-    public_key_2= int(public_key_str.split("|")[1].strip())
+    parts =  public_key_str.split("|")
+    public_key_1= int(parts[0])
+    public_key_2= int(parts[1])
     encrypt_text= encrypt(msg,public_key_1,public_key_2)
     print(f'\nEncrypt text: \n{encrypt_text}')
 if __name__ == "__main__":
