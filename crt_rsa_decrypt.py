@@ -3,12 +3,11 @@ from convert_to_string import ConvertToStr
 from invert_module import InvertModulo
 import base64
 import time
+
 def crt_rsa(c, d, prime1, prime2): 
-    #Reducing base 
     base1 = PowMod(c, 1, prime1)
     base2 = PowMod(c, 1, prime2)
 
-    #Reducing exponent 
     exponent1 = PowMod(d, 1, prime1 - 1)
     exponent2 = PowMod(d, 1, prime2 - 1)
 
@@ -32,6 +31,7 @@ def decrypt_crt(ciphertext, d, prime1, prime2):
         b = int(s1)
         m += ConvertToStr(crt_rsa(b,d, prime1, prime2))
     return m
+
 def main():
     msg_encrypt= input('Enter encrypt message: ')
     private_key_base64 = input('Enter private key: ')

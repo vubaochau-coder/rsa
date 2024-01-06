@@ -13,6 +13,7 @@ def encrypt(message,e,modulo):
         cytxt = cytxt + cytxt1 + "|"
         s = s[per_char:]
     return base64.b64encode(cytxt.encode('utf-8'))
+
 def main():
     msg= input('Enter message: ')
     public_key = input('Enter public key: ')
@@ -23,3 +24,6 @@ def main():
     print(f'\nEncrypt text: \n{encrypt_text}')
 if __name__ == "__main__":
     main()
+    # for i in range(0, 70, +10):
+    #     print(i)
+    

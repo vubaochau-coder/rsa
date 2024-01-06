@@ -12,6 +12,7 @@ def decrypt(ciphertext, d, modulo):
         b = int(s1)
         m += ConvertToStr(PowMod(b, d, modulo))
     return m
+
 def main():
     msg_encrypt= input('Enter encrypt message: ')
     private_key_base64 = input('Enter private key: ')

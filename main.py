@@ -4,15 +4,16 @@ from get_key import public_key_1, public_key_2, private_key
 from crt_rsa_decrypt import decrypt_crt 
 from rsa_encrypt import encrypt
 from rsa_decrypt import decrypt
-from mutil_key import multikey
+from multi_key import multikey
 import time
 
 def main():
+
     bit = input('Enter bit to generate primes: ')
+    
     # plain text
     msg = input('Enter message: ')
-
-    
+  
     p= prime_generate(int(bit))
     q= prime_generate(int(bit))
     start_time_encrypt= time.time()

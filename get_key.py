@@ -43,6 +43,7 @@ def private_key(m, e):
         stack2.pop()
         stack3.pop()
     return m + d
+
 def main():
     bit = input('Enter bit to generate primes: ')
     p= prime_generate(int(bit))
