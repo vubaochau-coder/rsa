@@ -53,7 +53,7 @@ def main():
     d= private_key(m,e)
     public_key_str = str(e) + "|" +str(n)
     private_key_str= str(d) + "|" +str(n)+ "|" +str(p)+ "|" +str(q)
-    print(f'private key: {base64.b64encode(private_key_str.encode('utf-8'))}')
-    print(f'public key: {base64.b64encode(public_key_str.encode('utf-8'))}')
+    print(f'\nprivate key:\n {base64.b64encode(private_key_str.encode('utf-8'))}')
+    print(f'\npublic key:\n {base64.b64encode(public_key_str.encode('utf-8'))}')
 if __name__ == "__main__":
     main()

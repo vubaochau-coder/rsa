@@ -20,7 +20,7 @@ def main():
     private_key_int = int(parts[0])
     public_key_2= int(parts[1])
     start_time_decrypt_rsa = time.time()
-    print(f'Decrypt text: {decrypt( msg_encrypt, private_key_int, public_key_2)}')
+    print(f'\nDecrypt text: \n{decrypt( msg_encrypt, private_key_int, public_key_2)}')
     print(f'Time decrypt: {
         time.time()-start_time_decrypt_rsa
     }')

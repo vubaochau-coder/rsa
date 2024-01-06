@@ -41,7 +41,7 @@ def main():
     prime_1=  int(parts[2])
     prime_2=  int(parts[3])
     start_time_decrypt_crt_rsa = time.time()
-    print(f'Decrypt text: {decrypt_crt(msg_encrypt, private_key_int, prime_1, prime_2)}')
+    print(f'\nDecrypt text: \n{decrypt_crt(msg_encrypt, private_key_int, prime_1, prime_2)}')
     print(f'Time decrypt: {
         time.time()-start_time_decrypt_crt_rsa
     }')

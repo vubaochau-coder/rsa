@@ -20,6 +20,6 @@ def main():
     public_key_1= int(public_key_str.split("|")[0].strip())
     public_key_2= int(public_key_str.split("|")[1].strip())
     encrypt_text= encrypt(msg,public_key_1,public_key_2)
-    print(f'Encrypt text: {encrypt_text}')
+    print(f'\nEncrypt text: \n{encrypt_text}')
 if __name__ == "__main__":
     main()
