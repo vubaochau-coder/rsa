@@ -1,4 +1,5 @@
 import binascii
+
 def ConvertToStr(integer_value):
     hex_from_int = hex(integer_value)[2:]
     if len(hex_from_int) % 2 != 0:

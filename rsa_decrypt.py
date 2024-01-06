@@ -12,6 +12,7 @@ def decrypt(ciphertext, d, modulo):
         b = int(s1)
         m += ConvertToStr(PowMod(b, d, modulo))
     return m
+
 def main():
     msg_encrypt= input('Enter encrypt message: ')
     private_key_base64 = input('Enter private key: ')
@@ -21,8 +22,7 @@ def main():
     public_key_2= int(parts[1])
     start_time_decrypt_rsa = time.time()
     print(f'Decrypt text: {decrypt( msg_encrypt, private_key_int, public_key_2)}')
-    print(f'Time decrypt: {
-        time.time()-start_time_decrypt_rsa
-    }')
+    print(f'Time decrypt: {time.time()-start_time_decrypt_rsa}')
+    
 if __name__ == "__main__":
     main()
