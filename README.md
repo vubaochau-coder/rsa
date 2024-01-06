@@ -10,6 +10,7 @@ Tổng quan sản phẩm:
   - So sánh tốc độ giải mã giữa CRT-RSA và RSA
 
 Github:
+  - https://github.com/vubaochau-coder/rsa.git
 
 Hướng dẫn cài đặt:
   - Clone repo
