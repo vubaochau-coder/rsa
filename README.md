@@ -14,5 +14,8 @@ Github:
 
 Hướng dẫn cài đặt:
   - Clone repo
-  - Cài đặt python
-  - 
+  - Kiểm tra python đã được cài đặt chưa bằng lệnh: python --version
+  - Cài đặt python nếu chưa có
+  - Kiểm tra pip đã được cài đặt chưa bằng lệnh: pip --version
+  - Cài đặt pip nếu chưa có
+  - Chạy file main.py
